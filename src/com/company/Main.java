@@ -12,6 +12,7 @@ public class Main {
     String parameters = phone.getParameter();
     System.out.println(parameters);
     oldphone.displayValues();
+    phone.reducePrice(50);
 
     }
 
@@ -37,5 +38,15 @@ public class Main {
         public String getParameter() {
             return this.weight + " "+ this.price;
         }
+
+        public void displayValueOnly(){
+            System.out.println(this.price);
+        }
+        // zmiana ceny podana w argumencie benefit
+        public void reducePrice(int benefit){
+            int reducedPrice = this.price - (this.price * benefit/100);
+        System.out.println("Reduced price by "+ benefit +"% "+ "gives us " + reducedPrice);
+        }
+
     }
 }
